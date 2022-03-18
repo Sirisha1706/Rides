@@ -1,0 +1,23 @@
+body{
+  background-color:gray ;
+}
+.home {
+    padding: 20px;
+    margin: 30px auto;
+    text-align: center;
+  }
+.nav{
+  margin: 4rem 20px 20px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 5rem;
+  display: flex;
+  padding: 0px 10px;
+  align-items: center;
+  color:white;
+}  
+.link{
+  margin: 0px 20px;
+}

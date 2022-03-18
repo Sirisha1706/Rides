@@ -1,24 +1,34 @@
-import logo from './logo.svg';
+import React, { useState,useEffect } from 'react';
+import {BrowserRouter, Route, Routes} from 'react-router-dom'; 
+import Home from './Components/Home/Home';
+import MainHeader from './Components/MainHeader/MainHeader';
+import NearestRide from './Components/Rides/NearestRide';
+import PastRide from './Components/Rides/PastRide';
+import FutureRide from './Components/Rides/FutureRide';
 import './App.css';
 
-function App() {
+const App=()=> {
+  const [userData, setUserData]=useState('');
+  const user=()=>{
+    return fetch("https://assessment.api.vweb.app/user")
+          .then((response) => response.json())
+          .then((data)=>setUserData(data));
+      }; 
+  useEffect(() => {
+      user();
+    }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+    <BrowserRouter>
+      <MainHeader name={userData}/>
+      <Routes>
+        <Route exact path='/nearestRide' element={<NearestRide/>}/>
+        <Route exact path='/pastRide' element={<PastRide/>}/>
+        <Route exact path='/' element={<Home />}></Route>
+        <Route exact path='/futureRide' element={<FutureRide/>}/>
+      </Routes>
+      </BrowserRouter>
+      </React.Fragment>
   );
 }
 

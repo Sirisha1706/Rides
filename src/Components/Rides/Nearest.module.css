@@ -1,0 +1,9 @@
+.info{
+    background-color: black;
+    margin-top: 15%;
+    align-items: center;
+}
+.info ul{
+    list-style-type: none;
+    color:azure
+}
