@@ -1,6 +1,13 @@
-const FutureRide=()=>{
-    return (
-            <h1>Future Ride</h1>
+//import Card from '../UI/Card';
+import classes from './Nearest.module.css';
+import RideData from './RideData';
+const FutureRide = (props) =>{
+    let details=[];
+    details=props.rides;
+    return(
+        <div className={classes.info}>
+        {details.map(det=><RideData data={det}/>)}
+        </div>
     );
 };
 

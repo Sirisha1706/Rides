@@ -1,7 +1,8 @@
 .info{
-    background-color: black;
-    margin-top: 15%;
     align-items: center;
+    display: flex;
+    flex-direction: column ;
+    box-sizing: border-box;
 }
 .info ul{
     list-style-type: none;
