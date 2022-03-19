@@ -1,25 +1,27 @@
+import RideData from './RideData';
+import './RideFilter.css';
 const RideFilter = props =>{
-    const dropdownChangeHandler = (event) => {
-        props.onChangeFilter(event.target.value);
-    };
     let values = []
     values=props.rides;
     return (
-        <div>
+      <>
+        <div className="filter">
           <h1>Filter</h1>
-          <div>
-            <label>City</label>
-            <select value={'City'} onChange={dropdownChangeHandler}>
+          <div className='city'>
+            <select value={'City'}>
               {values.map(val=><option value={val.city}>{val.city}</option>)}
             </select>
             </div>
-            <div>
-            <label>State</label>
-            <select value={'State'} onChange={dropdownChangeHandler}>
+            <div className='state'>
+            <select value={'State'} >
             {values.map(val=><option value={val.state}>{val.state}</option>)}
             </select>
           </div>
         </div>
+        <div className='.info'>
+        {values.map(det=><RideData data={det} state={props.state}/>)}
+      </div>
+      </>
       );
 };
 
