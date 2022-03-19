@@ -7,7 +7,7 @@ const NearestRide = (props) =>{
 
     return(
         <div className={classes.info}>
-        {details.map(det=><RideData data={det} state={props.state}/>)}
+        {details.map(det=><RideData data={det} state={props.state} key={Math.random()}/>)}
         </div>
     );
 };

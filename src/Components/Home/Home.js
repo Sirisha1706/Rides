@@ -21,10 +21,10 @@ const Home=()=>{
    return(
     <div className={classes.home}>
         <nav className={classes.nav}>
-            <Button onClick={() => setcompnt('nearRide')} text="Nearest Ride"></Button>
-            <Button onClick={() => setcompnt('pastRide')} text='Past Ride'></Button>
-            <Button onClick={() => setcompnt('futureRide')} text='Upcoming Ride'></Button>
-            <Button onClick={() =>setcompnt('filter')} text='Filter' className={classes.btn}></Button>
+            <button onClick={() => setcompnt('nearRide')} >Nearest Ride</button>
+            <button onClick={() => setcompnt('pastRide')} >Past Ride</button>
+            <button onClick={() => setcompnt('futureRide')} >Upcoming Ride</button>
+            <button onClick={() =>setcompnt('filter')} className={classes.btn}>Filter</button>
         </nav>
         <div>
             {compnt ==='nearRide' && <NearestRide rides={userdetls} state={compnt}/>}

@@ -6,14 +6,16 @@ const RideFilter = props =>{
     return (
       <>
         <div className="filter">
-          <h1>Filter</h1>
+          <h1 align='center'>Filter</h1>
           <div className='city'>
-            <select value={'City'}>
+            <select value='City'>
+            <option selected>City</option>
               {values.map(val=><option value={val.city}>{val.city}</option>)}
             </select>
             </div>
             <div className='state'>
             <select value={'State'} >
+            <option selected>State</option>
             {values.map(val=><option value={val.state}>{val.state}</option>)}
             </select>
           </div>
