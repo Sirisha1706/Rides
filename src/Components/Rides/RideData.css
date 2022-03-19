@@ -3,22 +3,31 @@
     margin-left: 15rem;
     font-size: 30px;
     text-align: left;
-
+    margin-top: 30px;
+    position: fixed;
 }
 .button{
-    margin-left: 70px;
+    margin-left: 80%;
+    position: fixed;
+    margin-top:  30px;
+    border: 0ch;
+    width: fit-content;
+
 }
 .btn1{
-    top:20%;
-    right:60%;
+    margin-right: 20px;
+    font-size: medium;
+    text-decoration: none;
 }
 .btn2{
-
+    text-decoration: none;
+    font-size: medium;
 }
 .image{
     padding: 20px;
     width:50px;
     height:5px;
+    position: fixed;
 }
 .ride{
     margin: 10px;

@@ -23,7 +23,7 @@
     text-align: left;
 }
 .info{
-    align-items: center;
+    align-items: left;
     display: flex;
     flex-direction: column ;
     box-sizing: border-box;

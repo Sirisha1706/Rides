@@ -1,24 +1,27 @@
 import {useState} from 'react';
 import './RideData.css';
 const RideData =props =>{
-    const [val, setval]=useState(false);
     let data=[];
     data = props.data;
     let state = props.state;
     let date2=new Date(data.date);
     let date1=new Date();
+    let route=[];
+    route = data.station_path.map(val=>Math.abs(val-data.destination_station_code));
+    let minium=Math.min(parseInt(route.reverse()))
     return (
         <div className='ride'>
              <div className='image'>
-            <img src={data.map_url} alt='route'/>
+            <img src={data.map_url} alt='route' key={Math.random()}/>
             </div>
-            <div className="info" key={data.id}>
-                <div className='button'><button className='btn1'>City</button>
-                <button className='btn2'>State</button></div>
-                <div>Ride Id:{data.id}</div>
-                <div>Origin Station:{data.origin_station_code}</div>
-                <div>Station_path:{data.station_path}</div>
-                <div>date:{data.date}</div>
+            <div className='button' key={Math.random()}><button className='btn1' onClick={data.city}>City</button>
+                <button className='btn2' key={Math.random()}>State</button></div>
+            <div className="info" key={Math.random()}>
+                <div key={Math.random()}>Ride Id:{data.id}</div>
+                <div key={Math.random()}>Origin Station:{data.origin_station_code}</div>
+                <div key={Math.random()}>Station_path:{data.station_path}</div>
+                <div key={Math.random()}>date:{data.date}</div>
+                <div key={Math.random()}>Distance:{minium}</div>
             </div>
         </div>
     );
