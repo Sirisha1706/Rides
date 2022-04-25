@@ -1,20 +1,16 @@
-import { Button } from '../UI/Button';
 import {useState} from 'react';
 import './RideData.css';
 const RideData =props =>{
     const [val, setval] = useState('');
     let data=[];
     data = props.data;
-    let state = props.state;
-    let date2=new Date(data.date);
-    let date1=new Date();
     let route=[];
     route = data.station_path.map(val=>Math.abs(val-data.destination_station_code));
     let minium=Math.min(parseInt(route.reverse()))
     const clickHundler=(event )=>{
         event.preventDefault();
         let value = event.target.value;
-         if(value=='city') setval(data.city);
+         if(value==='city') setval(data.city);
          else setval(data.state);
     }
     return (

@@ -4,7 +4,6 @@ import NearestRide from '../Rides/NearestRide';
 import PastRide from '../Rides/PastRide';
 import FutureRide from '../Rides/FutureRide';
 import RideFilter from '../Rides/RideFilter';
-import { Button } from '../UI/Button';
 import classes from './Home.module.css';
 
 const Home=()=>{
