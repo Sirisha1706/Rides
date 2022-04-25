@@ -1,2 +1,2 @@
 deployment link :
-         https://rides-g4q79tvob-sirisha1706.vercel.app/
+         https://rides-i6gfd33h2-sirisha1706.vercel.app/
